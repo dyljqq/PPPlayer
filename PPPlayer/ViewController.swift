@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let playerView = PlayerView()
+    view.addSubview(playerView)
+    
+    playerView.snp.makeConstraints { make in
+      make.height.equalTo(200)
+      make.leading.equalToSuperview()
+      make.center.equalToSuperview()
+    }
+    
+    playerView.config(urlString: "https://cloud.video.taobao.com/play/u/3375170974/p/1/e/6/t/1/50067220605.mp4")
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
 
 }
 

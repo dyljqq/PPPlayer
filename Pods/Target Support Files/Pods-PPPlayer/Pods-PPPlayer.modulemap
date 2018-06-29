@@ -1,0 +1,6 @@
+framework module Pods_PPPlayer {
+  umbrella header "Pods-PPPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
